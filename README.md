@@ -1,3 +1,13 @@
+## Docker
+
+### Build the container
+
+    docker build .
+
+### Start the containers
+
+    docker compose up
+
 ## SSH
 
 ### SSH connexion for container
