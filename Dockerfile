@@ -11,5 +11,6 @@ EXPOSE 22
 
 WORKDIR /home/ubuntu
 RUN git init --bare
+RUN sudo chown -R test:root .
 
 CMD ["/usr/sbin/sshd","-D"]
