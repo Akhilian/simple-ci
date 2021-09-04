@@ -1,16 +1,43 @@
-## Docker
+# Simple CI
 
-### Build the container
+For the fun, i started this little project to fool around with Git server configuration, and PostgreSQL Pub/Sub functionnality.
 
-    docker build .
+The aim of this little project is to create a very simple integration system where the database will be interacting with some push on the Git server.
 
-### Start the containers
+## Backlog
+
+Git:
+- [x] Initialize docker image with git server
+- [x] Ensure the folder rights on the /home/ubuntu allows pushing commits ont the repository
+- [ ] Create hooks to notify the database that a new version is pushed
+
+Docker
+- [x] Initialize the docker-compose file and documentation to start project
+- [ ] Attach a PostgreSQL database to the network
+
+SSH / Connexion
+- [x] Initialize docker image with an SSH connection setup
+- [ ] Configure the `authorized_key` file ssh
+
+CI application
+- [ ] Initialize a database connexion
+- [ ] Listen to notification on the channel
+
+## Documentation
+
+### Docker
+
+#### Build the container
 
     docker compose up
 
-## SSH
+#### Start the containers
 
-### SSH connexion for container
+    docker compose up
+
+### SSH
+
+#### SSH connexion for container
 
 **user :** test
 
@@ -18,12 +45,12 @@
 
     ssh test@localhost
 
-## Git server
+### Git server
 
-### Add remote for git repository
+#### Add remote for git repository
 
     git remote add origin test@localhost:/home/ubuntu
 
-### Test Git connection
+#### Test Git connection
 
 Using the command `git ls-remote`, it is possible to check in the connexion to the remote git repository (in the container).
