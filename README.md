@@ -13,13 +13,13 @@ Git:
 
 Docker
 - [x] Initialize the docker-compose file and documentation to start project
-- [ ] Attach a PostgreSQL database to the network
+- [x] Attach a PostgreSQL database to the network
 
 SSH / Connexion
 - [x] Initialize docker image with an SSH connection setup
 - [ ] Configure the `authorized_key` file ssh
 
-CI application
+Application
 - [ ] Initialize a database connexion
 - [ ] Listen to notification on the channel
 
@@ -34,6 +34,10 @@ CI application
 #### Start the containers
 
     docker compose up
+
+#### Connect to the database
+
+    docker exec -it simpleci_database_1 psql -U simple_ci
 
 ### SSH
 
