@@ -14,6 +14,7 @@ Git:
 Docker
 - [x] Initialize the docker-compose file and documentation to start project
 - [x] Attach a PostgreSQL database to the network
+- [ ] Expose the application interface
 
 SSH / Connexion
 - [x] Initialize docker image with an SSH connection setup
@@ -22,6 +23,7 @@ SSH / Connexion
 Application
 - [ ] Initialize a database connexion
 - [ ] Listen to notification on the channel
+- [x] Create an application for the list of commit
 
 ## Documentation
 
