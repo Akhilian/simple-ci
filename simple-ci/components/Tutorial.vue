@@ -54,9 +54,19 @@ export default {
                     time: "17 hours",
                     status: "succeeded",
                     hash: "8ac2043e1d2a4fc25bf5967e3c3c8155d305a445"
-                }
+                },
             ]
         }
-    }
+    },
+
+    async fetch() {
+      const response = await fetch(
+        '/api/commits'
+      ).then(res => res.json())
+      
+      this.commits = response.commits
+    },
+
+    fetchOnServer: false
 }
 </script>
