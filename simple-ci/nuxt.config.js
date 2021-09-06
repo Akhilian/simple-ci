@@ -52,5 +52,10 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+  },
+
+  // Add an API in the application
+  serverMiddleware: [
+    { path: "/api", handler: "~/server-middleware/rest.js" },
+  ],
 }
