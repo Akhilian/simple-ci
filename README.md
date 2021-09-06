@@ -31,7 +31,7 @@ Application
 
 #### Build the container
 
-    docker compose up
+    docker compose build
 
 #### Start the containers
 
